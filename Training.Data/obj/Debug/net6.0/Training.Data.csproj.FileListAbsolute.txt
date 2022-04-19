@@ -1,0 +1,12 @@
+C:\Users\yaogu\source\repos\ConsoleApp1\Training.Data\obj\Debug\net6.0\Training.Data.csproj.AssemblyReference.cache
+C:\Users\yaogu\source\repos\ConsoleApp1\Training.Data\obj\Debug\net6.0\Training.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\yaogu\source\repos\ConsoleApp1\Training.Data\obj\Debug\net6.0\Training.Data.AssemblyInfoInputs.cache
+C:\Users\yaogu\source\repos\ConsoleApp1\Training.Data\obj\Debug\net6.0\Training.Data.AssemblyInfo.cs
+C:\Users\yaogu\source\repos\ConsoleApp1\Training.Data\obj\Debug\net6.0\Training.Data.csproj.CoreCompileInputs.cache
+C:\Users\yaogu\source\repos\ConsoleApp1\Training.Data\bin\Debug\net6.0\Training.Data.deps.json
+C:\Users\yaogu\source\repos\ConsoleApp1\Training.Data\bin\Debug\net6.0\Training.Data.dll
+C:\Users\yaogu\source\repos\ConsoleApp1\Training.Data\bin\Debug\net6.0\Training.Data.pdb
+C:\Users\yaogu\source\repos\ConsoleApp1\Training.Data\obj\Debug\net6.0\Training.Data.dll
+C:\Users\yaogu\source\repos\ConsoleApp1\Training.Data\obj\Debug\net6.0\refint\Training.Data.dll
+C:\Users\yaogu\source\repos\ConsoleApp1\Training.Data\obj\Debug\net6.0\Training.Data.pdb
+C:\Users\yaogu\source\repos\ConsoleApp1\Training.Data\obj\Debug\net6.0\ref\Training.Data.dll

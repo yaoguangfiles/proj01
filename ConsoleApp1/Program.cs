@@ -19,16 +19,182 @@ namespace Training{
         //comment
         //this is your main class
         public static void Main(string[] args){
-            Console.WriteLine("Hello, World!");
+            //Console.WriteLine("Hello, World!");
             //Console.ReadLine();
 
-            var day2 = new Day2();
-            day2.Log("My message");
-            day2.Log("My new message", 145);
+            //var day2 = new Day2();
+            //day2.Log("My message");
+            //day2.Log("My new message", 145);
 
             //Day1Examples();
-            Day2Examples();
+            //Day2Examples();
+            //Day3Examples();
+            //Day3QueueExample();
+            Day3StackExample();
         }
+
+        public struct Day3Struct {
+            public int id;
+            public string name;
+            private string otherName;
+            private List<string> colors;
+
+            public Day3Struct(int id, string name) {
+                this.id = id;
+                this.name = name;
+                this.otherName = name;
+                colors = new List<string>();
+            }
+
+            public void AddId(int num) {
+                this.id += num;
+            }
+
+            public void AddColor(string color) {
+                colors.Add(color);
+            }
+
+            public void Print() {
+                foreach(string color in colors)
+                {
+                    Console.WriteLine(color);
+                }
+            }
+        }
+
+        public static void WontChange(Day3Struct mystruct) {
+            mystruct.id = 0;
+        }
+
+        public static void WillChange(Day3Struct mystruct) {
+            mystruct.name = "someting";
+        }
+
+        public static void Day3Examples() {
+            var MyList = new List<string>();
+            //var firstItem = MyList[0];
+            MyList.Add("Seth");
+            string[] names = { "Miles", "Josh", "Jim", "Sarah", "Charlotte" };
+            MyList.AddRange(names);
+
+            for (int i = 0; i < MyList.Count; i++)
+            {
+                if(MyList[i] == "Charlotte")
+                {
+                    MyList.Remove(MyList[i]);
+                }
+
+                if ( MyList[i] == "Charlotte")
+                {
+                    MyList.RemoveAt(i);
+                }
+
+                MyList.ForEach(item => MyList.Remove(item));
+
+                foreach(var item in MyList)
+                {
+                    if(item == "Charlotte")
+                    {
+                        MyList.Remove(item);
+                    }
+                }
+            }
+        }
+
+        public static void Day3DictionaryExample() { //Y: what is the difference between C# dictionary and sortedList
+            var cities = new Dictionary<string, string>();
+            cities.Add("North Carolina", "Charlotte");
+            cities.Add("South Carolina", "Columbia");
+            cities.Add("West Virginia", "Charleston");
+            var charlotte = cities["North Carolina"];
+            cities.Remove("South Carolina");
+
+            foreach(KeyValuePair<string, string> kvp in cities)
+            {
+                Console.WriteLine($"The state is {kvp.Key} and it's city is {kvp.Value}");
+            }
+
+            cities.Clear();
+            cities["North Carolina"] = "Raleigh";
+            var cityNames = cities.Values;
+            var stateNames = cities.Keys;
+        }
+
+        public static void Day3SortedListExample() { //Y: what is C# SortedList?
+            var cities = new SortedList<string, string>(); //C++ hash map
+            cities.Add("North Carolina", "Charlotte");
+            cities.Add("South Carolina", "Columbia");
+            cities.Add("West Virginia", "Charleston");
+            var charlotte = cities["North Carolina"];
+            cities.Remove("South Carolina");
+
+            cities.Clear();
+            cities["North Carolina"] = "Raleigh";
+            var cityNames = cities.Values;
+            var stateNames = cities.Keys;
+        }
+
+        public static void Day3QueueExample() {
+            var myQueue = new Queue<string>();
+            myQueue.Enqueue("Seth");
+            myQueue.Enqueue("Miles");
+            myQueue.Enqueue("Charlotte");
+            myQueue.Enqueue("James");
+
+            var name = myQueue.Dequeue();
+            myQueue.Peek();
+            myQueue.Clear();
+
+            string[] queueOfName = { "" };
+            myQueue.CopyTo(queueOfName, 0);
+        }
+
+        public static void Day3StackExample() {
+            var myStack = new Stack<int>();
+            myStack.Push(42);
+            myStack.Push(13);
+            myStack.Push(21);
+            myStack.Push(35);
+
+            //int number = myStack.Pop();
+            int[] numArray = { };
+            //myStack.CopyTo(numArray, 0);
+            //myStack.Clear();
+            if (myStack.Contains(13))
+            {
+
+            }
+            Console.WriteLine(myStack.ToString());
+            foreach(var item in myStack)
+            {
+                Console.WriteLine(item);
+                myStack.Pop();
+            }
+        }
+
+        public static void Day3Sorting() { //Y: bath room
+            Dog dog = new Dog("Test Dog", "Black", true);
+
+            Console.WriteLine(dog);
+            Console.WriteLine(dog.ToString());
+
+            List<Dog> dogList = new List<Dog>();
+            dogList.Add(new Dog("Princess", "Orange", true));
+            dogList.Add(new Dog("Bob", "Blue", true));
+            dogList.Add(new Dog("Mark", "Golden", false));
+
+            List<Dog> dogList2 = new List<Dog>(dogList);
+
+
+        }
+
+        //public static void Day3Examples() {
+        //    Day3Struct testStruct = new Day3Struct(1, "Joe");
+
+        //    Console.WriteLine(testStruct.name);
+        //    WillChange(testStruct);
+        //    Console.WriteLine(testStruct.name);
+        //}
 
         public static void Day2Examples() {
             var day2 = new Day2();

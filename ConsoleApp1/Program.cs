@@ -1,7 +1,10 @@
 ﻿// See https://aka.ms/new-console-template for more information
 //Console.WriteLine("Hello, World!");
 
+
+using Microsoft.Extensions.Configuration;
 using System;
+using System.Configuration;
 using Training.Data;
 
 namespace Training{
@@ -18,7 +21,7 @@ namespace Training{
 
         //comment
         //this is your main class
-        public static void Main(string[] args){
+        public static void Main(string[] args) {
             //Console.WriteLine("Hello, World!");
             //Console.ReadLine();
 
@@ -30,7 +33,44 @@ namespace Training{
             //Day2Examples();
             //Day3Examples();
             //Day3QueueExample();
-            Day3StackExample();
+            //Day3StackExample();
+
+            //Day3FileExamples d3 = new Day3FileExamples();
+            ////d3.ReadFromTextFile1();
+            ////d3.WriteToTextFile();
+            //var data = d3.ReadCsvData();
+            //foreach(var item in data)
+            //{
+            //    Console.WriteLine(item.ToString());
+            //}
+
+            //var charInput = Console.Read();
+            //Console.WriteLine($"You pressed: {charInput}");
+            //Console.WriteLine("Type something");
+
+            //var lineInput = Console.ReadLine();
+            //Console.WriteLine($"You said: {lineInput}");
+
+            //Console.WriteLine("Press any key to continue...");
+            //var keyInput = Console.ReadKey();
+            //Console.WriteLine($"You ReadKey: {keyInput}");
+
+            //var appConfUsername = ConfigurationManager.AppSettings["Username"];
+            //var appConfPassword = ConfigurationManager.AppSettings["Password"];
+            //Console.WriteLine($"My username is {appConfUsername} and my password is {appConfUsername}");
+
+
+            var builder = new ConfigurationBuilder()
+                .SetBasePath(Directory.GetCurrentDirectory())
+                .AddJsonFile("appsettings.json", optional: false);
+
+            IConfigurationSectionHandler configuration = builder.Builder();
+
+            //new Microsoft.Extensions.Configuration.ConfigurationBuilder().Build();
+            var connString = configuration.GetSection("ConfigurationSetting").Get<ConfigurationSetting>();
+        
+            Console.WriteLine(connString.ConnString.ToString());
+
         }
 
         public struct Day3Struct {
@@ -172,20 +212,40 @@ namespace Training{
             }
         }
 
-        public static void Day3Sorting() { //Y: bath room
+        //public static void Day3Sorting() { //Y: Yao wrote. //Y: bath room
+        //    Dog dog = new Dog("Test Dog", "Black", true);
+
+        //    Console.WriteLine(dog);
+        //    Console.WriteLine(dog.ToString());
+
+        //    List<Dog> dogList = new List<Dog>();
+        //    dogList.Add(new Dog("Princess", "Orange", true));
+        //    dogList.Add(new Dog("Bob", "Blue", true));
+        //    dogList.Add(new Dog("Mark", "Golden", false));
+
+        //    List<Dog> dogList2 = new List<Dog>(dogList);
+        //}
+
+        public static void Day3Sorting() { //Y: Miles wrote.
             Dog dog = new Dog("Test Dog", "Black", true);
 
+            //uses tostring by default
             Console.WriteLine(dog);
             Console.WriteLine(dog.ToString());
 
             List<Dog> dogList = new List<Dog>();
             dogList.Add(new Dog("Princess", "Orange", true));
             dogList.Add(new Dog("Bob", "Blue", true));
-            dogList.Add(new Dog("Mark", "Golden", false));
+            dogList.Add(new Dog("Mark", "Black", false));
 
             List<Dog> dogList2 = new List<Dog>(dogList);
 
-
+            Console.WriteLine($"[{String.Join(", ", dogList)}]");
+            Console.WriteLine($"[{String.Join(", ", dogList2)}]");
+            dogList.Sort();
+            dogList2.Sort(new DogComparer());
+            Console.WriteLine($"[{String.Join(", ", dogList)}]");
+            Console.WriteLine($"[{String.Join(", ", dogList2)}]");
         }
 
         //public static void Day3Examples() {

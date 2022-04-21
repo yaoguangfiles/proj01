@@ -1,0 +1,7 @@
+TextFile1
+Yao
+Guang
+ZhongMore text added to the end of the file
+This text appears on a different lineBut this is on the same line as the last------------
+More text added to the end of the file
+This text appears on a different lineBut this is on the same line as the last------------

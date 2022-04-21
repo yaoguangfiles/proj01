@@ -34,3 +34,15 @@ C:\main\skillStorm\projects\proj01\ConsoleApp1\bin\Debug\net6.0\Training.Data.pd
 C:\main\skillStorm\projects\proj01\ConsoleApp1\obj\Debug\net6.0\Training.csproj.CopyComplete
 C:\main\skillStorm\projects\proj01\ConsoleApp1\obj\Debug\net6.0\Training.genruntimeconfig.cache
 C:\main\skillStorm\projects\proj01\ConsoleApp1\obj\Debug\net6.0\ref\Training.dll
+C:\main\skillStorm\projects\proj01\ConsoleApp1\bin\Debug\net6.0\Training.dll.config
+C:\main\skillStorm\projects\proj01\ConsoleApp1\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\main\skillStorm\projects\proj01\ConsoleApp1\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
+C:\main\skillStorm\projects\proj01\ConsoleApp1\bin\Debug\net6.0\System.Drawing.Common.dll
+C:\main\skillStorm\projects\proj01\ConsoleApp1\bin\Debug\net6.0\System.Security.Cryptography.ProtectedData.dll
+C:\main\skillStorm\projects\proj01\ConsoleApp1\bin\Debug\net6.0\System.Security.Permissions.dll
+C:\main\skillStorm\projects\proj01\ConsoleApp1\bin\Debug\net6.0\System.Windows.Extensions.dll
+C:\main\skillStorm\projects\proj01\ConsoleApp1\bin\Debug\net6.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\main\skillStorm\projects\proj01\ConsoleApp1\bin\Debug\net6.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
+C:\main\skillStorm\projects\proj01\ConsoleApp1\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
+C:\main\skillStorm\projects\proj01\ConsoleApp1\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
+C:\main\skillStorm\projects\proj01\ConsoleApp1\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
